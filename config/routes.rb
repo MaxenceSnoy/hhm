@@ -2,6 +2,10 @@ Rails.application.routes.draw do
   devise_for :renters
   devise_for :owners
   root to: 'pages#home'
+
+
+  # devise_for :users, :path => '', :controllers => {:sessions => 'sessions', :registrations => 'registrations'}, :path_names => { :sign_in => 'login', :password => 'forgot', :confirmation => 'confirm', :unlock => 'unblock', :registration => 'register', :sign_up => 'new', :sign_out => 'logout'}
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
