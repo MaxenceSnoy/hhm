@@ -29,7 +29,7 @@
           <td><%= task.description %></td>
 
           <% if task.status == "awaiting doc" %>
-            <td><button type="button" class="submit-btn" data-toggle="modal" data-target="#myModal">
+            <td><button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">
            Upload doc</button></td>
 
           <%= render 'modal', { document: Document.find(task.document_id), task: task } %>
@@ -52,7 +52,7 @@
           <td></td>
            <td></td>
 
-        <td><%= link_to 'New Task', new_flat_task_path(@flat), class: "submit-btn" %></td>
+        <td><%= link_to 'New Task', new_flat_task_path(@flat), class: "btn btn-default" %></td>
         <td></td>
       </tr>
 

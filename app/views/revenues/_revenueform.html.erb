@@ -1,16 +1,16 @@
 <%= simple_form_for [@contract, @revenue] do |f| %>
       <%= f.error_notification %>
       <div class="form-actions">
-        <%= f.button :submit, :class => "submit-btn" %>
+        <%= f.button :submit, :class => "btn btn-default" %>
       </div>
 
       <div class="form-inputs">
         <%= f.input :rent_month, order: [:month, :year] %>
         <%= f.input :paid %>
-       
+
       </div>
 
       <div class="form-actions">
-        <%= f.button :submit, :class => "submit-btn" %>
+        <%= f.button :submit, :class => "btn btn-default" %>
       </div>
     <% end %>

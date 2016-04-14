@@ -25,7 +25,7 @@
             <div class="div-table-col description"><%= task.description %></div>
 
             <% if task.status == "awaiting doc" %>
-              <div class="div-table-col due-date"><button type="button" class="submit-btn" data-toggle="modal" data-target="#myModal">
+              <div class="div-table-col due-date"><button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">
               Upload doc</button></div>
               <%= render 'modal', { document: Document.find(task.document_id), task: task } %>
             <% elsif Time.now > task.due_date %>
@@ -40,7 +40,7 @@
 
           </div>
         <% end %>
-        <div> <%= link_to 'New Task', new_flat_task_path(@flat), class: "submit-btn" %> </div>
+        <div> <%= link_to 'New Task', new_flat_task_path(@flat), class: "btn btn-default" %> </div>
     </div>
   </form>
 
@@ -113,7 +113,7 @@
           <td></td>
            <td></td>
 
-        <td><%= link_to 'New Task', new_flat_task_path(@flat), class: "submit-btn" %></td>
+        <td><%= link_to 'New Task', new_flat_task_path(@flat), class: "btn btn-default" %></td>
         <td></td>
       </tr>
 
